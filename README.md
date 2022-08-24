@@ -1,4 +1,1 @@
-# Dynaaminenverkkosivu
-
-<jfaoijfaofi>
-  
+Tämä on dynaamisen verkkosivun kurssille
