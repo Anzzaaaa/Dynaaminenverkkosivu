@@ -10,18 +10,19 @@
   <body>
     <div id="root"></div>
     <script type="text/babel">
-    
-      function sec() {
-        const element = (
-          <h3>{new Date().toLocaleTimeString()}</h3>
-        );
-        ReactDOM.render(
-        element,
-        document.getElementById('root')
-        );
-      }
-      setInterval(sec,1000)
+    const container = document.getElementById('root');
+    const root = ReactDOM.createRoot (container);
+    let seconds = 0;
 
+    function tick() {
+    const element = (
+      <h3>{seconds}</h3>
+      );
+      seconds++;
+      root.render(element);
+    }
+     
+    setInterval(tick,1000)
     </script>
     <!--
       Note: this page is a great way to try React but it's not suitable for production.
@@ -38,3 +39,8 @@
     -->
   </body>
 </html>
+
+<!--const container = document.getElementById('root');
+const root = ReactDOM.createRoot (container);
+root.render (<MyApp) <
+-->
